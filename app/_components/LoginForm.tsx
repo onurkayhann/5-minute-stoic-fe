@@ -1,0 +1,49 @@
+import Link from 'next/link';
+
+export const LoginForm = () => {
+    return (
+        <div className='h-screen flex justify-center items-center p-16 bg-gray-100'>
+            <div className='w-full max-w-sm bg-white p-8 shadow-lg rounded-lg'>
+                <h2 className='text-2xl font-bold mb-6 py-14 text-center'>
+                    Login
+                </h2>
+
+                <form className='space-y-6'>
+                    <div>
+                        <p className='font-bold'>Email</p>
+                        <input
+                            type='email'
+                            placeholder='Email'
+                            className='w-full px-4 py-2 border border-indigo-500 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500'
+                        />
+                    </div>
+
+                    <div>
+                        <p className='font-bold'>Password</p>
+                        <input
+                            type='password'
+                            placeholder='Password'
+                            className='w-full px-4 py-2 border border-indigo-500 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500'
+                        />
+                    </div>
+
+                    <button
+                        type='submit'
+                        className='w-full px-4 py-2 bg-indigo-500 text-white font-semibold rounded-md hover:bg-indigo-600 transition'
+                    >
+                        Login
+                    </button>
+                </form>
+                <p className='pt-8'>
+                    Need to create an account?{' '}
+                    <Link
+                        href='#'
+                        className='text-indigo-500 hover:text-indigo-700'
+                    >
+                        Create Account
+                    </Link>
+                </p>
+            </div>
+        </div>
+    );
+};
