@@ -58,7 +58,7 @@ export const RegisterForm = () => {
                 <p className='pt-8'>
                     Already have an account?{' '}
                     <Link
-                        href='#'
+                        href='/login'
                         className='text-indigo-500 hover:text-indigo-700'
                     >
                         Go to Login

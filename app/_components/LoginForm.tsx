@@ -49,7 +49,7 @@ export const LoginForm = () => {
                 <p className='pt-8'>
                     Need to create an account?{' '}
                     <Link
-                        href='#'
+                        href='/register'
                         className='text-indigo-500 hover:text-indigo-700'
                     >
                         Create Account
