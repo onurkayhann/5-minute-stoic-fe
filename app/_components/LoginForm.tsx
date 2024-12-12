@@ -1,9 +1,21 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const LoginForm = () => {
     return (
         <div className='h-screen flex justify-center items-center p-16 bg-gray-100'>
             <div className='w-full max-w-sm bg-white p-8 shadow-lg rounded-lg'>
+                <div className='flex justify-center'>
+                    <div className='w-24 h-24 rounded-full overflow-hidden border border-indigo-500'>
+                        <Image
+                            src='/assets/app-logo.svg'
+                            alt='Logo'
+                            width={96}
+                            height={96}
+                        />
+                    </div>
+                </div>
+
                 <h2 className='text-2xl font-bold mb-6 py-14 text-center'>
                     Login
                 </h2>
