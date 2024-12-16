@@ -2,7 +2,6 @@
 
 import Image from 'next/image';
 import { LoginForm } from './_components/LoginForm';
-import { RegisterForm } from './_components/RegisterForm';
 
 
 export default function Home() {
