@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { CustomUser, CustomUserForm } from '../_type/ICustomUser';
 import { useState, ChangeEvent, FormEvent } from 'react';
+import { useRouter } from 'next/navigation';
 
 export const RegisterForm = () => {
     const [customUser, setCustomUser] = useState<CustomUserForm>({
@@ -13,6 +14,7 @@ export const RegisterForm = () => {
     });
 
     const [isLoading, setIsLoading] = useState<boolean>(false);
+    const router = useRouter();
 
     // Handle input changes
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -42,6 +44,8 @@ export const RegisterForm = () => {
 
             if (response.ok) {
                 console.log('User successfully registered');
+                alert('Registration successful!');
+                router.push('/login');
             } else {
                 console.error('Registration failed');
             }
