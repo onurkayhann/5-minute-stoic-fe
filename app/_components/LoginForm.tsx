@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, ChangeEvent, FormEvent } from 'react';
+import { useRouter } from 'next/navigation';
 
 interface LoginRequest {
     username: string;
@@ -15,6 +16,7 @@ export const LoginForm = () => {
     });
 
     const [isLoading, setIsLoading] = useState<boolean>(false);
+    const router = useRouter();
 
     // Handle input changes
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -43,7 +45,7 @@ export const LoginForm = () => {
                 const message = await response.text();
                 console.log('Login Successful:', message);
                 alert('Login Successful');
-                // Redirect to another page if needed, e.g., dashboard
+                router.push('/home');
             } else if (response.status === 404) {
                 alert('User not found');
             } else if (response.status === 401) {
