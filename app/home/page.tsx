@@ -7,7 +7,7 @@ export default function HomePage() {
 
     return (
         <div>
-            <p>Welcome {username ? username : 'Guest'}!</p>
+            <p>Welcome {username ? username : 'User'}!</p>
         </div>
     );
 }
