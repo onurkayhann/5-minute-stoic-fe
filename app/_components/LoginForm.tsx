@@ -45,7 +45,7 @@ export const LoginForm = () => {
                 const message = await response.text();
                 console.log('Login Successful:', message);
                 alert('Login Successful');
-                router.push('/home');
+                router.push(`/home?username=${loginRequest.username}`);
             } else if (response.status === 404) {
                 alert('User not found');
             } else if (response.status === 401) {
