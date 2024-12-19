@@ -1,7 +1,13 @@
 import { useState, useEffect } from 'react';
 import { StoicJournal } from '../_type/IStoicJournal';
 
-export default function JournalComponent({ username }: { username: string }) {
+export default function JournalComponent({
+    username,
+    refreshTrigger,
+}: {
+    username: string;
+    refreshTrigger: boolean;
+}) {
     const [journals, setJournals] = useState<StoicJournal[]>([]);
     const [isLoading, setIsLoading] = useState<boolean>(true);
 
@@ -25,7 +31,7 @@ export default function JournalComponent({ username }: { username: string }) {
         };
 
         fetchJournals();
-    }, [username]);
+    }, [username, refreshTrigger]);
 
     return (
         <div className='p-8'>
